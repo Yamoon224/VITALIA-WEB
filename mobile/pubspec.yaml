@@ -1,0 +1,44 @@
+name: vitalia_mobile
+description: "VITALIA — agent conversationnel santé et bien-être (application patient)."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # État et injection de dépendances (section 11.1 : choix arrêté au cadrage — Riverpod)
+  flutter_riverpod: ^2.6.1
+
+  # Navigation déclarative avec liens profonds (section 11.1)
+  go_router: ^14.8.1
+
+  # Client HTTP + flux de réponses de l'IA (SSE)
+  dio: ^5.7.0
+
+  # Jetons et cache dans le stockage sécurisé du système (section 8, 11.1)
+  flutter_secure_storage: ^9.2.2
+
+  # Entités immuables et comparaison par valeur (DTO, états BLoC/Cubit — section 11.1)
+  equatable: ^2.0.7
+
+  # Rendu Markdown restreint des réponses de l'agent (section 11.1 : jamais de WebView)
+  flutter_markdown_plus: ^1.0.3
+
+  # Bouton d'urgence permanent : appel direct via le composeur natif (section 5.14)
+  url_launcher: ^6.3.1
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
